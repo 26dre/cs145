@@ -20,8 +20,8 @@
 #define NOP() asm volatile("nop"::)
 
 void avr_wait(unsigned short msec);
-void wait(int instructions_to_wait){
-    volatile int i;
+void wait(long unsigned instructions_to_wait){
+    volatile long unsigned i;
     for (i = 0; i < instructions_to_wait; i++);
 }
 #endif /* _AVR_H_ */

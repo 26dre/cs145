@@ -21,7 +21,7 @@
 
 void avr_wait(unsigned short msec);
 void wait(int instructions_to_wait){
-    int i;
+    volatile int i;
     for (i = 0; i < instructions_to_wait; i++);
 }
 #endif /* _AVR_H_ */

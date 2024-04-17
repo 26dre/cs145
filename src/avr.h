@@ -19,5 +19,6 @@
 #define NOP() asm volatile("nop"::)
 
 void avr_wait(unsigned short msec);
+void wait(int instructions_to_wait);
 
 #endif /* _AVR_H_ */

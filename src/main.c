@@ -3,11 +3,11 @@
 
 int main() {
     DDRB = 1;
-    // PORTB = 1;
+    
     while(1){
-        wait(10000);
         PORTB = 0;
-        wait(10000);
+        wait(32000);
         PORTB = 1;
+        wait(32000);
     };
 }

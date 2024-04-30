@@ -3,17 +3,27 @@
 
 int main() {
     DDRB = 0x01;
-    //initializes the first bit of the Bs to 1. All others are 0 allowing for input
+    // SET_BIT(PORTB, 2);
+    // //initializes the first bit of the Bs to 1. All others are 0 allowing for input
     
     while(1){
-        PORTB = 0;
 
-        for (int i = 0; i < 10 ; i++){
-            wait(5000);
-        }
-        PORTB = 1;
-        for (int i = 0; i < 10; i++){
-            wait(5000);
-        }
+        // SET_BIT (PORTB, 1);
+        // PORTB = 0x01;
+
+        // SET_BIT(PORTB, 1);
+
+        // if(GET_BIT(PORTB, 1) == 0) {
+        //     PORTB = 1;
+        // } 
+
+        PORTB = 0x01;
+
+        wait(30000);
+
+        // CLR_BIT(PORTB, 1);
+        PORTB = 0x00;
+        wait(30000);
+       
     };
 }
